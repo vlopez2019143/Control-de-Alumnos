@@ -1,0 +1,390 @@
+{
+	"info": {
+		"_postman_id": "6e11722a-8e35-4c31-bb1a-e932e992a525",
+		"name": "Alumnos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Registrar alumno",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "Usuario",
+							"value": "Axel",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api//registrarAlumno",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"",
+						"registrarAlumno"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "registrar maestro",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "Usuario",
+							"value": "Erick",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api//registrarMaestro",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"",
+						"registrarMaestro"
+					],
+					"query": [
+						{
+							"key": "Usuario",
+							"value": "Erick",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "Usuario",
+							"value": "Erick",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "getToken",
+							"value": "true",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api//login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Usuario",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDM1YjdiMDcxOTEyNzIxNDhkOGVhYjciLCJVc3VhcmlvIjoiQXhlbCIsInJvbCI6IlJPTF9BTFVNTk8iLCJpYXQiOjE2MTQxMzM0NjksImVweCI6MTYxNDgyNDY2OX0.OGnLadWz2RYf09mBuso8uo_Ak6SwcjEQLGanHoruXA8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "Usuario",
+							"value": "Axel",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api//editarUsuario/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"",
+						"editarUsuario",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "6035b7b07191272148d8eab7"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ingresar curso",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDM1YjdiMDcxOTEyNzIxNDhkOGVhYjciLCJVc3VhcmlvIjoiQXhlbCIsInJvbCI6IlJPTF9BTFVNTk8iLCJpYXQiOjE2MTQxMzM0NjksImVweCI6MTYxNDgyNDY2OX0.OGnLadWz2RYf09mBuso8uo_Ak6SwcjEQLGanHoruXA8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "Nombre",
+							"value": "Etica",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api//ingresarCurso",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"",
+						"ingresarCurso"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Curso",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDM1Yjg5MDcxOTEyNzIxNDhkOGVhYmIiLCJVc3VhcmlvIjoiRXJpY2siLCJyb2wiOiJST0xfTUFFU1RSTyIsImlhdCI6MTYxNDEzMzk2OCwiZXB4IjoxNjE0ODI1MTY4fQ.AvIqaDjwejXt_GJY01j4iAUuev8gSdMwl6vJtend8cA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "Nombre",
+							"value": "Etica",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/ingresarCursos",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"ingresarCursos"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDM1YjdiMDcxOTEyNzIxNDhkOGVhYjciLCJVc3VhcmlvIjoiQXhlbCIsInJvbCI6IlJPTF9BTFVNTk8iLCJpYXQiOjE2MTQxMzM4OTIsImVweCI6MTYxNDgyNTA5Mn0.zNhjHT6aDDXtoArzfRgtWdEbRPxCEeHmOp6ZkAhLvu0",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar curso",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDM1Yjg5MDcxOTEyNzIxNDhkOGVhYmIiLCJVc3VhcmlvIjoiRXJpY2siLCJyb2wiOiJST0xfTUFFU1RSTyIsImlhdCI6MTYxNDEzMzk2OCwiZXB4IjoxNjE0ODI1MTY4fQ.AvIqaDjwejXt_GJY01j4iAUuev8gSdMwl6vJtend8cA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api//obtenerCursos",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"",
+						"obtenerCursos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Cursos",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDM1Yjg5MDcxOTEyNzIxNDhkOGVhYmIiLCJVc3VhcmlvIjoiRXJpY2siLCJyb2wiOiJST0xfTUFFU1RSTyIsImlhdCI6MTYxNDEzMzk2OCwiZXB4IjoxNjE0ODI1MTY4fQ.AvIqaDjwejXt_GJY01j4iAUuev8gSdMwl6vJtend8cA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "Nombre",
+							"value": "Etica2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api//editarCurso/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"",
+						"editarCurso",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "6035badd7191272148d8eabe"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar usuario",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDM1Yjg5MDcxOTEyNzIxNDhkOGVhYmIiLCJVc3VhcmlvIjoiRXJpY2siLCJyb2wiOiJST0xfTUFFU1RSTyIsImlhdCI6MTYxNDEzMzk2OCwiZXB4IjoxNjE0ODI1MTY4fQ.AvIqaDjwejXt_GJY01j4iAUuev8gSdMwl6vJtend8cA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "localhost:3000/api//EliminarUsuario/:id ",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"",
+						"EliminarUsuario",
+						":id "
+					],
+					"variable": [
+						{
+							"key": "id ",
+							"value": "6035b7b07191272148d8eab7"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EliminarCurso",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDM1Yjg5MDcxOTEyNzIxNDhkOGVhYmIiLCJVc3VhcmlvIjoiRXJpY2siLCJyb2wiOiJST0xfTUFFU1RSTyIsImlhdCI6MTYxNDEzMzk2OCwiZXB4IjoxNjE0ODI1MTY4fQ.AvIqaDjwejXt_GJY01j4iAUuev8gSdMwl6vJtend8cA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/EliminarCurso/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"EliminarCurso",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "6035badd7191272148d8eabe"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
